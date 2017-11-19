@@ -1,0 +1,475 @@
+/*----------------------------------------------------------
+Project:	    Startuo
+Author:         Ezaz Ahmed
+Description:    Corporate Template
+Version:	    1.0
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+                    TABLE OF CONTENTS
+------------------------------------------------------------
+    1. Variables
+    2. Typography
+    3. Global
+    4. pre-loader
+    5. Navbar
+    6. AfterNavbar
+    7. Home
+    8.Product
+    9.Services
+    10.Contact
+    11.Footer
+ */
+
+
+
+:root{
+	/* Shadows */
+	--text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+	--navigation-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+
+	/* Google Font */
+	--font-color-primary: #363636;
+	--font-color-secondary: #424242;
+	--font-family: 'Open Sans', sans-serif;
+}
+
+	body{
+	margin: 0px;
+	padding: 0px;
+	font-family: var(--font-family);
+	background: transparent;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-text-stroke: 1px transparent;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-rendering: optimizelegibility;
+}
+
+
+
+/* Typography
+---------------------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6{
+	color: var(--font-color-primary);
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	word-spacing:2px;
+	letter-spacing: 1px;
+}
+
+h1{  font-size: 3.2em;  }
+h2{  font-size: 2.8em;  }
+h3{  font-size: 2.4em;  }
+h4{  font-size: 2em;  }
+h5{  font-size: 1.6em;  }
+h6{  font-size: 1.2em;  }
+
+p, a, ul, li, blockquote, address, input {
+	margin: 0;
+	padding: 0;
+	font-size: 1.05em;
+	font-weight: 300;
+	line-height: 1.5;
+	word-spacing: 1.5px;
+	letter-spacing: .5px;
+	color: var(--font-color-secondary);
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+	display: inline-block;	
+}
+
+
+/* GLOBAL
+---------------------------------------------------------------------------------*/
+
+section{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 100px 0;
+}
+
+hr{
+	width: 80px;
+	height: 3px;
+	margin-bottom: 30px;
+	background-color: #009688;
+}
+
+/*Pre-loader
+---------------------------------------------------------------------------------*/
+
+#loading{
+	background-color: #bd4932;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	margin-top: 0px;
+	top: 0px;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 200px;
+	width: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+}
+#object{
+	width: 80px;
+	height: 80px;
+	background-color: #FFF;
+	-webkit-animation: animate 1s infinite ease-in-out;
+	animation: animate 1s infinite ease-in-out;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+}
+@-webkit-keyframes animate {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+
+@keyframes animate {
+  0% { 
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); 
+  } 50% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+  } 100% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+/*Navbar
+---------------------------------------------------------------------------------*/
+
+.navbar-inverse{
+	margin: 0px;
+	padding: 0px;
+	border-radius: 0%;
+	border: 0px;
+	background-color: #212121;
+}
+
+#nav-right li a {
+	color: whitesmoke;
+	font-size: 1.2em;
+}
+
+#nav-right li a:hover{
+	background-color:purple;
+	transition: 0.5s; 
+}
+
+.logo-size{
+	float: left;
+	width: 60px;
+	height: 40px;
+	position: relative;
+	top: 5px;
+	right: 5px;
+}
+
+#brand-edit{
+	font-size: 1.8em;
+}
+
+
+
+/* AFter-Nav
+---------------------------------------------------------------------------------------*/
+
+.heading{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height:800px;
+	background-image: url(../img/header.jpg);
+	background-size: cover;
+
+}
+
+.overlay1{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height:800px;
+	background-color: rgba(0,0,0,.75);
+}
+
+.title{
+
+	color: #00bcd4;
+	text-align: center;
+	position: relative;
+	top:200px;
+}
+
+.title-p{
+	font-size: 1.5em;
+	color: #90caf9;
+	text-align: center;
+	position: relative;
+	top: 250px;
+}
+
+@media (max-width:600px){
+    .title-p{ 
+	font-size: 1.1em;   
+
+    }
+}
+
+
+/* Home
+--------------------------------------------------------------------------------------*/
+
+#home{
+	width: 100%
+	height:auto;
+	background-color:white;
+}
+
+@media (max-width:600px){
+    .heading{
+      
+        height: 800px;
+
+    }
+}
+
+@media (max-width:600px){
+    .overlay1{
+        margin-bottom: 500px;
+        height: 800px;
+
+    }
+}
+
+.section-title{
+
+	text-align: center;
+}
+
+.home-p{
+	font-size: 1.2em;
+	position: relative;
+	top: 15px;
+}
+
+.home-title{
+	color: #009688;
+	margin-top: 50px;
+}
+
+
+
+/* Product
+--------------------------------------------------------------------------------------*/
+
+.portfolio{
+	width: 100%
+	height:500px;
+	background-color: #cfd8dc;
+	text-align:center;
+	padding-top: 50px;
+}
+
+.portfolio h1{
+	color:#4c4c4c;
+	font-size: 30px;
+	margin-bottom: -10px;
+	
+}
+
+.portfolio_part{
+	margin-top:50px;
+}
+
+.portfolio_filter ul{
+	padding:0px;
+	margin:0px;
+	list-style: none;
+	text-align: center;
+}
+
+.portfolio_filter ul li {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.portfolio_filter ul li button{
+	background:#41C0B9;
+	padding:5px 10px;
+	font-size: 16px;
+	border: none;
+	color:#fff;
+}
+
+.portfolio_filter ul li.active button{
+	background:black !important;
+}
+
+.view{
+	margin-left:-30px;
+}
+
+.portfolio_items img{
+	width:100%;
+	max-width: 320px;
+	margin-top:20px;
+}
+
+
+@media only screen and (max-width: 900px) {
+     
+
+     .portfolio_items img {
+    width: 100%;
+    max-width: 262px;
+    margin-top: 20px;
+    text-align: 
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color:black;
+    }
+
+.portfolio h1 {
+    
+    font-size: 16px;
+   
+}
+
+}
+
+
+
+/* Services
+--------------------------------------------------------------------------------------*/
+
+#service{
+	width: 100%
+	height:auto;
+	background-color: white;
+}
+
+.icon-2{
+	font-size: 30px;
+	color:#009688;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.font-serve{
+	margin-top: 10px;
+	color: #004D40;
+}
+
+.serve-paragraph{
+	margin-top:3px;
+	font-size: 1.1em;
+}
+
+
+
+/* Contact
+--------------------------------------------------------------------------------------*/
+
+#contact{
+	width: 100%
+	height:500px;
+	background-color: #cfd8dc;
+}
+
+.cont-title{
+	text-align: center;
+}
+
+.submit-btn{
+	background-color: transparent;
+	border: 1px  solid black;
+	color: black;
+	transition: 0.5s;
+}
+
+.social{
+	width: 100%;
+	height: auto;
+	background-color: #bdbdbd;
+	padding-bottom: 30px;
+}
+
+.icon{
+	font-size: 2em;
+	padding-top: 30px;
+	color: #004d40;
+	
+}
+
+
+.last1{
+	padding-top: 60px;
+	font-size: 1.1em;
+}
+
+.last2{
+	padding-top: 10px;
+	font-size: 1.1em;
+}
+
+.social-icon{
+	padding-top: 20px;
+	font-size: 2.5em;
+	color: #004d40;
+	transition: 0.5s;
+}
+
+
+
+
+/* Footer
+--------------------------------------------------------------------------------------*/
+
+footer{
+    min-height: 50px;
+    padding: 10px 0;
+    background-color:#424242;
+}
+
+footer p, footer p a{
+    color: white;
+}
+
+footer p a:hover{
+    color: #009688;
+
+}
